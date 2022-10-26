@@ -5,3 +5,35 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+
+body {
+    /* background: linear-gradient(135deg, rgb(9, 5, 30), rgb(4, 44, 44)); */
+    background: linear-gradient(135deg, rgb(14, 8, 28), rgb(54, 1, 1));
+}
+
+.stylo {
+    font-size: 120px;
+   color: rgb(63, 205, 122);
+   text-shadow: 4px 4px #0e9e81;
+   border-radius: 10px;
+   font-family: 'Raleway', sans-serif;
+  
+}
+
+.stylo:hover {
+    color: rgb(169, 30, 111);
+    text-shadow: 4px 4px #340842;
+
+}
+
+.indexado {
+    font-size: 120px;
+    color: rgb(63, 205, 122);
+    text-shadow: 4px 4px #0e9e81;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    z-index: -1;
+    position: fixed;
+    opacity: 0;
+}

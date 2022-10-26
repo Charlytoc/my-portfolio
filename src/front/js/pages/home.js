@@ -1,26 +1,63 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import gsap from "gsap";
+
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 
+	
+	const timeline = gsap.timeline()
+
+	const animation = () => {
+	  
+	  let animables = document.querySelectorAll(".animar")
+	//   console.log(animables[1])
+
+	  timeline.from(animables, {
+		y: -50,
+		duration: 1,
+		opacity: 0,
+		stagger: 0.5
+	  })
+	}
+  
+	useEffect(() => {
+	  animation();
+	  
+	}, [])
+	
+
+	const moverDerecha = (i) => {
+		let elementToMove = document.querySelectorAll(".der")
+		// let elementToShow = document.querySelector(".indexado")
+
+// 
+		gsap.to(elementToMove[i], {
+			x: 30, opacity: 0.1, rotateX: 45, rotatey: 65
+		})
+
+	
+	}
+	const regresar = (i) => {
+		let elementToMove = document.querySelectorAll(".der")
+		gsap.to(elementToMove[i], {
+			x: -30,
+			opacity: 1, rotateX: 0, rotatey: 0
+				})
+	}
+
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-			<div className="alert alert-info">
-				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
-			</div>
-			<p>
-				This boilerplate comes with lots of documentation:{" "}
-				<a href="https://github.com/4GeeksAcademy/react-flask-hello/tree/95e0540bd1422249c3004f149825285118594325/docs">
-					Read documentation
-				</a>
-			</p>
+		<>
+		<div className="container w-100 mt-3">
+		{/* <h1 className="indexado text-center">Hidden text</h1> */}
+		<h1 onMouseLeave={()=>{regresar(0)}} onMouseEnter={()=>{moverDerecha(0)}} className="text-center stylo animar linkear der" >Bienvenido</h1>
+		
+		<h1 onMouseLeave={()=>{regresar(1)}} onMouseEnter={()=>{moverDerecha(1)}}  className="text-center stylo animar der" >a mi página</h1>
+		<h1 onMouseLeave={()=>{regresar(2)}} onMouseEnter={()=>{moverDerecha(2)}}  className="text-center stylo animar der" >soy Charlytoc</h1>
 		</div>
+		</>
 	);
 };
