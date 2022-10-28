@@ -8,6 +8,10 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { About } from "./pages/datePicker";
+
+
+import DateFnsUtils from '@date-io/date-fns';
 
 //create your first component
 const Layout = () => {
@@ -19,11 +23,13 @@ const Layout = () => {
         <div>
             <BrowserRouter basename={basename}>
                 <ScrollToTop>
-                    {/* <Navbar /> */}
+                    
                     <Routes>
                         <Route element={<Home />} path="/" />
+                        <Route element={<About />} path="/about" />
                     </Routes>
-                    {/* <Footer /> */}
+                    
+                    
                 </ScrollToTop>
             </BrowserRouter>
         </div>
