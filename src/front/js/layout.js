@@ -20,7 +20,7 @@ const Layout = () => {
     const basename = process.env.BASENAME || "";
 
     return (
-        <div>
+        <div className="h-100 container w-100 align-items-center">
             <BrowserRouter basename={basename}>
                 <ScrollToTop>
                     

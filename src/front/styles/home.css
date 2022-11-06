@@ -12,28 +12,125 @@ body {
     background: linear-gradient(135deg, rgb(14, 8, 28), rgb(54, 1, 1));
 }
 
-.stylo {
-    font-size: 120px;
-   color: rgb(63, 205, 122);
-   text-shadow: 4px 4px #0e9e81;
-   border-radius: 10px;
-   font-family: 'Raleway', sans-serif;
-  
+.gato {
+    background-color: #FFD8CC;
+    width: 200px;
+    height: 200px;
+    position: static;
+    align-items: center;
+    /* top: 1vh; */
+    border-radius: 20%;
+    justify-content: center;
+    display: flexbox;
+    
 }
 
-.stylo:hover {
-    color: rgb(169, 30, 111);
-    text-shadow: 4px 4px #340842;
+.gato .orejas .espacio {
+    background: linear-gradient(135deg, rgb(14, 8, 28), rgb(54, 1, 1));
+    width: 88px;
+    height: 70px;
+    margin: 0 auto;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    align-items: center;
+    justify-content: center;
 
+    
+    
 }
 
-.indexado {
-    font-size: 120px;
-    color: rgb(63, 205, 122);
-    text-shadow: 4px 4px #0e9e81;
-    border-radius: 10px;
-    font-family: 'Raleway', sans-serif;
-    z-index: -1;
-    position: fixed;
-    opacity: 0;
+.espacio::before {
+    content: '';
+    width: 33px;
+    height: 70px;
+    position: absolute;
+    background-color:#FFD8CC;
+    top: 10%;
+    right: 56%;
+    border-top-right-radius: 50%;
+}
+
+.espacio::after {
+    content: '';
+    width: 33px;
+    height: 70px;
+    position: absolute;
+    background-color: #FFD8CC;
+    top:10%;
+    left: 56%;
+    border-top-left-radius: 50%;
+}
+
+.ojos {
+    width: 100%;
+    background-color: #FFBD9B;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.ojos .ojo-1 {
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    position: absolute;
+    left: 49%;
+    border-radius: 50%;
+}
+
+.ojos .ojo-2 {
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 54%;
+    border-radius: 50%;
+}
+
+.ojos .ojo-1 .pupila-1 {
+    background-color: #0A1D37;
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    position: absolute;
+    right: -24%;
+    top: -22%;
+    border-radius: 50%;
+}
+
+.ojos .ojo-2 .pupila-2 {
+    background-color: #0A1D37;
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    position: absolute;
+    left: -24%;
+    top: -22%;
+    border-radius: 50%;
+}
+
+.mandibula {
+    width: 100px;
+    height: 50px;
+    background-color: #FFBD9B;
+    margin: 0 auto;
+    border-radius: 55%;
+    margin-top: 3px;
+}
+
+.mandibula .boca {
+    width: 48px;
+    height: 100%;
+    background-color: #FFEEDB;
+    margin: 0 auto;
+    vertical-align: auto;
+    border-radius: 50%;
+
 }
